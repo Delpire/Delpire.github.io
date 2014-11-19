@@ -1,0 +1,72 @@
+#game-container {
+	position: relative;
+	margin-top: 5px;
+}
+
+#game {
+	position: absolute;
+  	border: solid 1px black;
+  	position: relative;
+  	width: 800px;
+  	height: 480px;
+}
+
+#minimap {
+	position: absolute;
+  	border: solid 1px black;
+  	position: relative;
+  	width: 800px;
+  	height: 100px;
+}
+
+#gameBy {
+	position: absolute;
+  	position: relative;
+  	font-size: 150%;
+  	width: 800px;
+  	height: 30px;
+}
+
+#artBy {
+	position: absolute;
+  	position: relative;
+  	font-size: 150%;
+  	width: 800px;
+  	height: 30px;
+}
+
+#gui-top-left {
+	position:absolute;
+	top: 5px;
+	left: 5px;
+}
+
+#gui-top-center{
+	position:absolute;
+	top: 5px;
+	left: 375px;
+}
+
+#gui-top-right {
+	position:absolute;
+	top: 5px;
+	left: 730px;
+}
+
+#gui-bottom-left {
+	position:absolute;
+	bottom: 5px;
+	left: 5px;
+}
+
+#gui-bottom-center{
+	position:absolute;
+	bottom: 0px;
+}
+
+#gui-bottom-right {
+	position:absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
