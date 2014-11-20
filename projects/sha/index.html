@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RegexFractals</title>
+    <title>SHA-1</title>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -21,9 +21,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     
-    <script src="./regexfractals.js"></script>
-    
-    <link type="text/css" rel="stylesheet" href="regexfractals.css" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -67,12 +65,21 @@
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
-          <div>
-          <canvas id="grid" width="512" height="512"></canvas>
+          <div id="hash-input-div">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="input-group">
+                <input id="hash-input" type="text" class="form-control">
+                <span class="input-group-btn">
+                  <button id="hash-button" class="btn btn-default" type="button">Hash!</button>
+                </span>
+              </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+          </div><!-- /.row -->
           </div>
           <div class="row">
             <div>
-              <h2>RegexFractals</h2>
+              <h2>SHA-1 Algorithm</h2>
               <p></p>
           </div><!--/row-->
         </div><!--/.col-xs-12.col-sm-9-->
@@ -82,10 +89,12 @@
       <hr>
 
       <footer>
-        <p>&copy; Chris Delpire 2014</p>
+        <p>Chris Delpire 2014</p>
       </footer>
 
     </div><!--/.container-->
+    
+    <script src="./index.js"></script>
     
   </body>
 </html>
