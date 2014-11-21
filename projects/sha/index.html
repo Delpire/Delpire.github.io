@@ -23,6 +23,8 @@
     
     <link type="text/css" rel="stylesheet" href="styles.css" />
 
+    <link rel="stylesheet" href="../../octicons/octicons.css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -91,11 +93,7 @@
   <p>SHA-1, like many hash algorithms, hashes strings through bit manipulation. The plaintext string is converted to its equivalent string of bits, receives some padding, and then goes through a long series of bit operations. In the end, the algorithm will yield a string of 160 bits or 40 characters. Any size original string will result in 40 characters, which is nice because the size of the final hash cannot be used to infer the size of the original string.</p>
   <p>I decided to write my SHA-1 function in Python. This was particularly challenging because it was one of the first few programs I had ever written in Python. This was a great learning experience because not only did I learn how SHA-1 works, but I also learned how to do bit manipulation in Python. Adding my function to the website also served as a bit of a challenge. Web pages use HTML, CSS, and Javascript, not Python. In order to give my website access to my python script, I decided to make use of websockets. Websockets are communication channels between a web page and another program. When you click the hash button above, your string is sent to my server, where it is passed off to my Python script. The server reads in the results of the script, and sends the hash back through the websocket, where it is then displayed on the page. This is similar to how entering a password would work on any other site. Once the server has the hash to your password, it compares it with the hash it has stored for your account. If these hashes match, then the server knows the correct password has been entered, and let’s the user access their account.</p>
 
-
-
-
-
-
+  <p><a class="btn btn-default" href="https://github.com/Delpire/daily-programmer/tree/master/Breach%207-25-2014" role="button"><span class="octicon octicon-mark-github"></span>&nbsp;View code &raquo;</a></p>
 
       <hr>
 
