@@ -67,13 +67,48 @@
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
-          <div>
-          <canvas id="grid" width="512" height="512"></canvas>
+          <div class="row">
+            <div class="col-xs-7">
+            <canvas id="grid" width="512" height="512"></canvas>
+            </div>
+            <div class="col-xs-5">
+              <ul class="list">
+                <li class="input-group">
+                  Regex: 
+                    <input id="patternInput" type="text" class="form-control" value=".*(1).*">
+                </li>
+                <li class="dropdown list">
+                  Pixel Size:
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><button id= "pixelButton">4x<span class="caret"/></button></a>
+                  <ul class="dropdown-menu list" role="menu">
+                    <li onclick="selectPixelSize(this)"><a href="#">1x</a></li>
+                    <li onclick="selectPixelSize(this)"><a href="#">2x</a></li>
+                    <li onclick="selectPixelSize(this)"><a href="#">4x</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <button id="hash-button" class="btn btn-default" type="button" onclick="drawGrid()">Go!</button>
+                </li>
+                <li id="expressions">
+                Try out:
+                  <br>
+                  .*(13|31).*
+                  <br>
+                  .*(13|31|24|42).*
+                  <br>
+                  .*12.*
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="row">
             <div>
               <h2>RegexFractals</h2>
-              <p></p>
+<p>RegexFractals is a program I wrote for a Reddit Daily Programmer challenge. If you would like to read about the challenge, you can visit the link <a href="https://www.reddit.com/r/dailyprogrammer/comments/2fkh8u/"><u>here</u></a>.</p>
+  <p>This program makes use of regular expressions (regex) to create a pattern called a fractal. A fractal is a repeating pattern that will look the same regardless of scale. Fractals can be made using mathematical equations, but they are also found in nature. A great example of a fractal is a fern leaf. A fern leaf is made up of small leaves that each look a smaller fern leaf.</p> 
+<p>A regular expression is a computer science tool that is used to match strings of characters. For example, the regular expression “[bdf]og” can be used to match the words bog, dog, and fog. The word log would not be matched by this regular expression. In this program, regular expression is not used to match words, but to match combinations of the numbers 1 through 4.</p>
+<p>The program first splits the image into 4 quadrants labeled 1 through 4. Quadrant 1 is in the top left, quadrant 2 is in the top right, quadrant 3 is in the bottom left, and quadrant 4 is in the bottom right. This way of labeling quadrants is the same as the labeling on the cartesian plane. Once the image is split, it recursively splits each quadrant into four more quadrants. For example the four quadrants inside the original quadrant 1 would be labeled 11, 12, 13, and 14. This algorithm continues until each pixel in the image has a number assigned to it. The number corresponding to the pixel in the top right will contain all 1’s, the pixel in the top left will contain all 2’s, etc. Now, the program will read in a regular expression. It will iterate through each pixel, and try to match the number associated with this pixel to the regular expression. If the number matches, it will color this pixel black. If the number does not match, it will color the pixel white. The result yields a fractal.</p>
+<p>I decided to use Javascript to write this program in order to make use of HTML5’s canvas element. The canvas element is a new element introduced by the HTML5 standard. It is a tool used to draw images to a web page. This allowed me to created these fractals without writing files, or worrying about different file formats. It also makes the program very easy to display on my webpage to anyone using a browser with HTML5.</p>
           </div><!--/row-->
         </div><!--/.col-xs-12.col-sm-9-->
       </div><!--/.sidebar-offcanvas-->

@@ -1,3 +1,7 @@
+size = 4;
+pixel = 512;
+pattern = /.*(1).*/; 
+
 function InitializeArray(){
 
 	for( i = 0; i < pixel; i++){
@@ -23,14 +27,17 @@ function PrintArray(){
 	}
 }
 
-function drawGrid(pattern){
+function drawGrid(){
 	
 	var grid = document.getElementById("grid");
 	var ctx=grid.getContext("2d");
+
+	size = Number(document.getElementById("pixelButton").innerHTML[0]);
+	pattern = new RegExp(document.getElementById("patternInput").value);
 	
-	gridSize = 512;
+	gridSize = pixel * size;
 	pixelSize = gridSize / pixel;
-	
+
 		for (i = 0; i < pixel; i++) {
 			
 			for (j = 0; j < pixel; j++) {
@@ -84,6 +91,12 @@ function SplitQuadrant(start_x, end_x, start_y, end_y){
 
 }
 
+function selectPixelSize(element){
+
+	var button = document.getElementById("pixelButton");
+	button.innerHTML = element.childNodes[0].innerHTML + "<span class='caret'/>";
+}
+
 
 //Function starts when the page is loaded. This
 //will initialize the array, split the quadrant,
@@ -91,13 +104,12 @@ function SplitQuadrant(start_x, end_x, start_y, end_y){
 $(function(){
 
 	//Initial pixel amount and pattern.
-	pixel = 512;
-	pattern = /.*(1).*/;
 	pixel_array = [];
 
 
 	InitializeArray();
 	SplitQuadrant(0, pixel, 0, pixel);
 	PrintArray();
-  	drawGrid(pattern);
+  	drawGrid();
 })
+
