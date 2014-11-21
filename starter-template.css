@@ -5,3 +5,11 @@ body {
   padding: 40px 15px;
   text-align: left;
 }
+
+.img{
+	float: left;
+	margin-top: 5px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	border: solid black 1px
+}
