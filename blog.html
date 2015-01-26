@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog</title>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- Starter Template -->
+    <link rel="stylesheet" href="starter-template.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Chris Delpire</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="./index.html">Home</a></li>
+            <li><a href="./process.html">Process</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./hobbies.html">Hobbies</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./resume.pdf">Resume</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="container">
+      <div class="starter-template">
+        <h1>Blog #1 Introduction</h1>
+        <p>In this blog I will be discussing the introduction to Gregory’s Game Engine Architecture which discusses some systems involved in a game engine. I will then discuss what some of these systems do, which I have have worked with, and which ones interest me the most.</p>
+        <br>
+        <p>The first chapter of Gregory’s Game Engine Architecture book goes through a variety of topics. He starts out by discussing his beginnings with the old Intellivision System and his purpose for writing the book, and then moves into a variety of topics: what is a game, what genres are out there, what platforms can be used, etc. Finally, he moves on to talk about various systems that are involved in or with a game engine such as the operating system, third-party SDKs, core systems, collision and physics, human interface devices, audio, multiplayer, networking, and more. None of these systems surprised me, and later I will discuss which I have had some experience with, and which I have interest in.</p>
+        <p>All of these systems are necessary when creating a game engine. The first is the operating system (OS). Most machines today have an OS installed on them, and any software written and run on this OS must follow some certain rules. For example, certain operating systems can only support certain languages. Also, the OS is a crucial part to communicating with the hardware, so this must be kept in mind when developing an engine. SDK’s are tools that already exist that can aid in creating a game engine. These can provide algorithms and data structures, graphics creation and rendering, physics, collision, animation, and much more. Human interface devices, are important systems for interacting with a game or game engine. This can be a mouse, keyboard, gamepad, or even something like the Oculus Rift, a headset for virtual reality. Audio is important as many games are improved with exciting music, sound, and cutscenes with voice over. Some games have multiplayer or online components, these systems are necessary for engines that wish to support these features.</p>
+        <p>In some way or another, I have touched all of these systems while developing software and many of them in the context of games. I took the game design class that was a prerequisite for this course, and we developed some basics in many of this systems to create simple 2D games. We touched on audio, collision and physics, taking input, and some other core systems. On other projects I have developed on the OS level and done some networking. In a competition at one of my internships, a friend and I developed a chat website making use of a third-party tool called socket.io that aided in web communication between clients. Socket.io could be used for a web based game engine as it is written in Javascript and intented for the web.</p>
+        <p>Networking is actually something I am incredibly interested in. I believe everything is moving towards the web platform as it is the most universal platform, existing on nearly all current devices (pcs, consoles, smartphones, tablets, etc.) When we develop our game engine, I would like to add some networking capabilities.</p>
+        <p>I am also interested in some of the core systems. I really enjoy writing algorithms, and I would like to learn about rendering graphics. I have loved math since highschool, so I think that many of the core systems will have some interesting challenges to tackle.</p>
+        <p>Overall, I am excited to begin working on implementing many of these game engine systems. I think that they will improve my skills as a programmer, as well as provide many interesting and fun problems to solve. In the end, I hope to get my hands on as many of these systems as possible.</p>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>Chris Delpire 2014</p>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
