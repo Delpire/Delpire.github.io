@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog</title>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- Starter Template -->
+    <link rel="stylesheet" href="starter-template.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Chris Delpire</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./process.html">Process</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./hobbies.html">Hobbies</a></li>
+            <li class="active"><a href="./blog.html">Blog</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./resume.pdf">Resume</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="container">
+      <div class="starter-template">
+        <h1>Blog #2 DirectX 11 vs DirectX9</h1>
+        <p>In this blog I will be discussing my experience with following DirectXTutorial.com’s DirectX 11 tutorial for rendering a triangle. This tutorial can be found at http://www.directxtutorial.com/LessonList.aspx?listid=11. I will also be comparing this with the DirectX 9 tutorial.</p>
+        <p>The first part of the tutorial was to initialize DirectX. This was very straight forward. It first involved including the headers “d3d11.h”, “d3dx11.h”, and “d3dx10.h”. This was the first difference between using DirectX 11 and DirectX9. DirectX9 only needs one header, “d3d9.h”, while DirectX 11 uses the headers listed above. Also, since DirectX 11 is an expansion of DirectX 10, “d3dx10.h” is also included. After including the header files, some Direct3D objects were created, and two functions, “InitD3D()” and “CleanD3D()”. These functions are fairly straight forward. They basically initialize the Direct3D objects needed when the program starts, and then cleans up all the resources when the program exits. These objects and functions are where there is a pretty big difference between DirectX 11 and DirectX9. In DirectX9, you create a Direct3D Interface using a function called “Direct3DCreate9()” which takes an SDK version. In DirectX 11 you just create a swap chain, zeros out the values, and sets some flags. The clean function between the two versions of DirectX are very similar, they just differ in what Direct3D objects are being released.</p>
+        <p>The next step was to render a frame. Rendering a frame involves some more initialization, so more work was done in “InitD3D()”. The first thing I had to do was create a global RenderTargetView which I called backbuffer. This is where all of my rendering will be done. So in the initialization phase, the buffer is retrieved from the swap chain and backbuffer is set. After that, a viewport needs to be made. This step is extremely simple, a viewport object is created, the top left x and y points are set, and the width and height are set. Finally, this viewport is used to set the device context’s viewport. A function now needs to be written to render a single frame. I called this “RenderFrame()”. This simply cleared the backbuffer with a blue color, and then gets the swapchain to present it. The DirectX 9 tutorial did a lot less to do the same. There was less initialization, however a little bit more in the frame rendering function. The differences in the frame rendering were very small. DirectX 9 basically uses some different functions with different parameters, but the concept is similar.</p>
+        <p>The next part of the tutorial was setting everything to full screen. DirectX 11 and DirectX 9 were nearly identical in this aspect, and I just skimmed this tutorial. Essentially, this just involves setting the window width/height, viewport width/height, and backbuffer width/height to the size of the monitor’s screen.</p>
+        <p>Finally I got to the section where we actually render a triangle. This was the longest part of the tutorial thus far as there is a large amount of information. The first step is to set up a vertex shader and pixel shader. These are read in and compiled from a file. I created a file called “shaders.shader” that contains the shaders I needed for the tutorial. These shaders are then put into shader objects which are stored in the device. Once the shaders have been created, a struct needs to be created to represent a vertex. I created this struct calling it a “VERTEX”. It simply contains an x, y, z, and color. I then created a function called “InitGraphics()” which created three vertices that will make a triangle. Next, I create a vertex buffer and initialize it in the “InitGraphics()” function. Finally, I set up an InputLayout, and added code in the frame rendering function to set the vertex buffers and draw the triangle. The DirectX 9 tutorial has many similarities with the DirectX 11 tutorial. A vertex struct is created, and then an array of these vertices are used to represent a triangle. There also needs to be a vertex buffer. This is perhaps where one of the differences lies. In DirectX 9, the vertex buffer needs to be manually locked and unlocked. The vertex buffer is written into while it is locked. The biggest difference is that in the DirectX9 tutorial, a “shaders.shader” file was not needed.</p>
+        <p>I did not cover every single detail presented in the tutorial, nor every difference between DirectX 11 and DirectX 9. Hopefully this blog post gave you a general idea of what was done to get a triangle rendered. For more information, please go to the link above and read the tutorial.</p>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>Chris Delpire 2014</p>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
