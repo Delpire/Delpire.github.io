@@ -24,6 +24,13 @@ $(function() {
   });
 });
 
+$(document).ready(function(){
+    $('#answer-input').keypress(function(e){
+      if(e.keyCode==13)
+      $('#enter-button').click();
+    });
+});
+
 function shuffle(a) {
     var j, x, i;
     for (i = a.length; i; i--) {
@@ -40,13 +47,13 @@ enterButton.onclick = function(){
       answer = answerInput.value.toLowerCase();
 
       if (answer == jsonData.questions[questions[index]].answer){
-        question.innerHTML = jsonData.questions[questions[index]].question + " <br><font color=\"green\"><span class=\"octicon octicon-check\"></span>  Correct!</font></p>";
+        question.innerHTML = jsonData.questions[questions[index]].question + " <div id=\"answer-div\"><p><br><font color=\"green\"><span class=\"octicon octicon-check\"></span>  Correct!</font></p></div>";
         answeredCorrectly = true;
         enterButton.innerHTML = "Next Question"
 
       }
       else{
-          question.innerHTML = jsonData.questions[questions[index]].question + " <br><font color=\"red\"><span class=\"octicon octicon-x\"></span>  Incorrect!</font></p>";
+          question.innerHTML = jsonData.questions[questions[index]].question + " <div id=\"answer-div\"><p><br><font color=\"red\"><span class=\"octicon octicon-x\"></span>  Incorrect!</font></p></div>";
       }
   }
   else{
