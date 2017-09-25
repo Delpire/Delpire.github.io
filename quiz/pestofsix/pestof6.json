@@ -1,0 +1,80 @@
+{
+    "questions": [
+        {
+            "question": "Two bones in the human skull, when joined together at a fibrous joint, form the sides and the roof of the cranium.",
+            "answer": "parietal"
+        },
+        {
+            "question": "Two bones in the human skull, which are roughly quadrilateral in form, has two surfaces, four borders, and four angles.",
+            "answer": "parietal"
+        },
+        {
+            "question": "This bone is named from the latin word for wall",
+            "answer": "parietal"
+        },
+        {
+            "question": "An unpaired bone in the skull that separates the nasal cavity from the brain.",
+            "answer": "ethmoid"
+        },
+        {
+            "question": "This bone is located at the roof of the nose, between two orbits.",
+            "answer": "ethmoid"
+        },
+        {
+            "question": "This cubical bone is lightweight due to a spongy construction.",
+            "answer": "ethmoid"
+        },
+        {
+            "question": "An unpaired bone of the neurocranium situated in the middle of the skull towards the front.",
+            "answer": "sphenoid"
+        },
+        {
+            "question": "This bone is in front of the temporal bone and the basilar part of the occiptal bone.",
+            "answer": "sphenoid"
+        },
+        {
+            "question": "This bone's shape somewhat resembles that of a butterfly or bat with its wings extended.",
+            "answer": "sphenoid"
+        },
+        {
+            "question": "These bones are sitated at the sides and base of the skull, and lateral to the temporal lobes of the cerebral cortex.",
+            "answer": "temporal"
+        },
+        {
+            "question": "These bones are overlaid by the sides of the head known as the temples and house the structures of the ears.",
+            "answer": "temporal"
+        },
+        {
+            "question": "The lower seven cranial nerves and the major vessels to and from the brain traverse this bone.",
+            "answer": "temporal"
+        },
+        {
+            "question": "This bone is a cranial dermal bone, and is the main bone of the occiput (back and lower part of the skull).",
+            "answer": "occipital"
+        },
+        {
+            "question": "This bone is trapezoidal in shape and curved on itself like a shallow dish.",
+            "answer": "occipital"
+        },
+        {
+            "question": "This bone overlies the occipital lobes of the cerebum.",
+            "answer": "occipital"
+        },
+        {
+            "question": "At the base of the skull, in this bone, there is a large oval opening called the framen magnum, which allows the passage of the spinal cord.",
+            "answer": "occipital"
+        },
+        {
+            "question": "This bone contains three portions, the squamous part, the orbital part, and the nasal part.",
+            "answer": "frontal"
+        },
+        {
+            "question": "This bone makes up the bony part of the forehead, part of the bony orbital cavity holding the eye, and part of the bony part of the nose.",
+            "answer": "frontal"
+        },
+        {
+            "question": "This bone comes from the latin word for forehead.",
+            "answer": "frontal"
+        }
+    ]
+}
