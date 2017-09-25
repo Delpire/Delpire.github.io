@@ -4,10 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact</title>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>Quiz</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
@@ -18,10 +15,10 @@
     <!-- Starter Template -->
     <link rel="stylesheet" href="starter-template.css">
 
-    <link rel="stylesheet" href="./octicons/octicons.css">   
-
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./octicons/octicons.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,41 +44,50 @@
             <li><a href="./index.html">Home</a></li>
             <li><a href="./process.html">Process</a></li>
             <li><a href="./projects.html">Projects</a></li>
-            <li><a href="./quiz.html">Quiz</a></li>
+            <li class="active"><a href="./quiz.html">Quiz</a></li>
             <li><a href="./hobbies.html">Hobbies</a></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="./resume.pdf">Resume</a></li>
-            <li class="active"><a href="./contact.html">Contact</a></li>
+            <li><a href="./contact.html">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
     
-    <footer>
-      <div class="container">
-        <div class="starter-template">
-            <h1>Contact Info:</h1>
-            <p class="lead">Please feel free to email me at chrisdelpire@gmail.com or give me at call at 615-887-7027.</p>
-            <ul id="logo-list">
-              <li>
-                <a href="mailto:chrisdelpire@gmail.com"><span class="mega-octicon octicon-mail" style="font-size:4em; vertical-align: bottom;"></span></a>
-              </li>
-              <li>
-                <a href="http://github.com/delpire"><img src="GitHub_Logo.png" height="16%" width="16%" style="padding-top:5px"></img></a>
-              </li>
-              <li>
-                <a href="http://www.linkedin.com/pub/chris-delpire/a1/988/1b7/"><img src="linkedin.png" height="19%" width="19%"></img></a>
-              </li>
-            </ul>
-        </div>
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div class="jumbotron">
+            <h1>Quiz</h1>
+            <p>This page contains some quizzes I made to help study anatomy.</p>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 col-lg-4">
+              <h2>PEST OF 6</h2>
+              <p>This quiz is to learn the "PEST OF 6" skull bones.</p>
+              <p><a class="btn btn-default" href="http://54.191.27.179:3000/" role="button">View site &raquo;</a>
+<a class="btn btn-default" href="https://github.com/atheiman/chatHub" role="button"><span class="octicon octicon-mark-github"></span>&nbsp;View code &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+          </div><!--/row-->
+        </div><!--/.col-xs-12.col-sm-9-->
+      </div>
       <hr>
 
       <footer>
         <p>Chris Delpire 2014</p>
       </footer>
-        
-      </div>
-    </footer>
+
+    </div><!--/.container-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
     
   </body>
 </html>
